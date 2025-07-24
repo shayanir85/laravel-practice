@@ -1,0 +1,73 @@
+       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+       body {
+           font-family: 'Inter', sans-serif;
+       }
+
+       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+       body {
+           font-family: 'Inter', sans-serif;
+       }
+
+       .book-card {
+           transition: all 0.3s ease;
+       }
+
+       .book-card:hover {
+           transform: translateY(-4px);
+           box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+       }
+
+       .filter-dropdown {
+           max-height: 0;
+           overflow: hidden;
+           transition: max-height 0.3s ease;
+       }
+
+       .filter-dropdown.active {
+           max-height: 200px;
+       }
+
+       .category-scroll {
+           scrollbar-width: none;
+           -ms-overflow-style: none;
+       }
+
+       .category-scroll::-webkit-scrollbar {
+           display: none;
+       }
+
+       .featured-gradient {
+           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+       }
+
+       .book-card {
+           transition: all 0.3s ease;
+       }
+
+       .book-card:hover {
+           transform: translateY(-8px);
+           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+       }
+
+       .category-link {
+           transition: all 0.2s ease;
+       }
+
+       .category-link:hover {
+           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+           transform: translateY(-2px);
+       }
+
+       .search-results {
+           display: none;
+       }
+
+       .search-results.active {
+           display: block;
+       }
+
+       .hero-gradient {
+           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+       }
