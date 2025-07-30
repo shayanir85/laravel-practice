@@ -17,6 +17,7 @@
     <!--end::Sidebar-->
     <!--begin::App Main-->
     @yield('main-part')
+    @yield('main-part-genre')
     @yield('main-part-book')
     <!--end::App Main-->
     <!--begin::Footer-->

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\book;
 use Illuminate\Http\Request;
 
 class BookController extends Controller
@@ -28,7 +29,9 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $newBook = new book($request -> all() );
+        $newBook-> save();
+        return redirect('Book');
     }
 
     /**

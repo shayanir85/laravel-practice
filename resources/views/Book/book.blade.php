@@ -9,25 +9,30 @@
                 </div>
                 <!--end::Header-->
                 <!--begin::Form-->
-                <form>
-                    <!--begin::Body-->
+                <form method="post" action="{{ route('Book.store') }}">
+                    {{ @csrf_field() }}
                     <div class="card-body">
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Name of the book</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                            <label for="nameOfBook" class="form-label">Name of the book</label>
+                            <input type="text" class="form-control" name="name" id="nameOfBook" />
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">writer</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" />
+                            <label for="writerOfBook" class="form-label">writer</label>
+                            <input type="text" class="form-control" name="writer" id="writerOfBook" />
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">year of the book</label>
-                            <input type="date" class="form-control" id="exampleInputPassword1" />
+                            <label for="YearOfBook" class="form-label">year of the book</label>
+                            <input type="date" class="form-control" name="year" id="YearOfBook" />
                         </div>
-                        <div class="input-group mb-3">
-                            <input type="file" class="form-control" id="inputGroupFile02" />
-                            <label class="input-group-text" for="inputGroupFile02">Upload</label>
-                        </div>
+                        <!-- <div class="mb-3">
+                            <label for="genre_id" class="form-label">genre_id</label>
+                            <input type="text" class="form-control" name="genre_id" id="genre_id" />
+                        </div> -->
+
+                        <!-- <div class="input-group mb-3">
+                                <input type="file" class="form-control" id="image" />
+                                <label class="input-group-text" name="imageOfBook" for="image">Upload</label>
+                            </div> -->
                     </div>
                     <!--end::Body-->
                     <!--begin::Footer-->

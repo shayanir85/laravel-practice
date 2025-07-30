@@ -18,7 +18,7 @@ return new class extends Migration {
             $table->timestamps();
 
             // Add this AFTER creating all other columns
-            $table->foreignId('genre_id')->constrained()->cascadeOnDelete();
+            // $table->foreignId('genre_id')->constrained()->cascadeOnDelete();
         });
     }
 

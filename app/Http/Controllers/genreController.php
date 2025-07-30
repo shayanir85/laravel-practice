@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\genre;
 use Illuminate\Http\Request;
 
 class GenreController extends Controller
@@ -11,7 +12,7 @@ class GenreController extends Controller
      */
     public function index()
     {
-        //
+        return view('genre/genre');
     }
 
     /**
@@ -27,7 +28,9 @@ class GenreController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $name = new genre($request -> all());
+        $name -> save();
+        return redirect('Genre');
     }
 
     /**

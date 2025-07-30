@@ -14,4 +14,4 @@ Route::get('/explore',function(){
 });
 
 Route::resource('/Book', BookController::class);
-Route::resource('/genre', GenreController::class);
+Route::resource('/Genre', GenreController::class);
