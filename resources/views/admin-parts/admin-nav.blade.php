@@ -8,7 +8,7 @@
           <i class="bi bi-list"></i>
         </a>
         </li>
-        <li class="nav-item d-none d-md-block"><a href="#" class="nav-link text-light">Home</a></li>
+        <li class="nav-item d-none d-md-block"><a href="/" class="nav-link text-light">Home</a></li>
         <li class="nav-item d-none d-md-block"><a href="#" class="nav-link text-light">Contact</a></li>
       </ul>
       <!--end::Start Navbar Links-->

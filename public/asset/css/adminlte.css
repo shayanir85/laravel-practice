@@ -14852,7 +14852,9 @@ html.maximized-card {
 .direct-chat-text {
   display: block;
 }
-
+.overflow-a{
+  overflow: auto;
+}
 .direct-chat-msg {
   margin-bottom: 10px;
 }

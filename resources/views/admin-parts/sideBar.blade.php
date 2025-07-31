@@ -21,7 +21,7 @@
       <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="navigation" aria-label="Main navigation"
         data-accordion="false" id="navigation">
         <li class="nav-item menu-open">
-          <a href="#" class="nav-link active">
+          <a href="/admin" class="nav-link active">
             <i class="nav-icon bi bi-speedometer"></i>
             <p>
               Dashboard
@@ -38,7 +38,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="/Book" class="nav-link">
                 <i class="nav-icon bi bi-file-plus"></i>
                 <p>Add Book</p>
               </a>
@@ -91,7 +91,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="/Genre" class="nav-link">
                 <i class="nav-icon bi bi-plus"></i>
                 <p>Add genre</p>
               </a>

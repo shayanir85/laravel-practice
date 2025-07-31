@@ -14,7 +14,7 @@
                     <div class="card-body">
                         <div class="mb-3">
                             <label for="nameOfBook" class="form-label">Name of the book</label>
-                            <input type="text" class="form-control" name="name" id="nameOfBook" />
+                            <input type="text" class="form-control" name="BookName" id="nameOfBook" />
                         </div>
                         <div class="mb-3">
                             <label for="writerOfBook" class="form-label">writer</label>
@@ -41,6 +41,13 @@
                     </div>
                     <!--end::Footer-->
                 </form>
+                @if ($errors->has('BookName'))
+                   <span class=" m-3 alert alert-danger ">{{ $errors -> first('BookName') }}</span> 
+                @elseif($errors->has('writer'))
+                   <span class=" m-3 alert alert-danger ">{{ $errors -> first('writer') }}</span> 
+                @elseif($errors->has('year'))
+                    <span class=" m-3 alert alert-danger ">{{ $errors -> first('year') }}</span> 
+                @endif
                 <!--end::Form-->
             </div>
 
