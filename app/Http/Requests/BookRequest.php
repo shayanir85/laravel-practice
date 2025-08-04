@@ -22,11 +22,11 @@ class BookRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'BookName' => 'required'
+            'name' => 'required|max:50'
             ,
             'year' => 'required'
             ,
-            'writer' => 'required'
+            'writer' => 'required|max:50'
 
         ];
     }

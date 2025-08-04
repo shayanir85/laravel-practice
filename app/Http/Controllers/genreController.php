@@ -29,9 +29,10 @@ class GenreController extends Controller
      */
     public function store(GenreRequest $request)
     {
+
         $name = new genre($request -> all());
         $name -> save();
-        return redirect('Genre');
+        return redirect('Genre')->with('success','successfully added the genre');
     }
 
     /**

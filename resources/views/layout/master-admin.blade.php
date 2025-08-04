@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <!--begin::Head-->
+
 <head>
   @include('admin-parts.admin-head')
 </head>
@@ -12,7 +13,7 @@
   <div class="app-wrapper">
     <!--begin::Header-->
     @include('admin-parts.admin-nav')
-    
+
     @include('admin-parts.sideBar')
     <!--end::Sidebar-->
     <!--begin::App Main-->

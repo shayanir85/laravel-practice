@@ -23,7 +23,7 @@ class GenreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required'
+            'name' => 'required|unique:genres|max:50'
         ];
     }
     public function attributes()

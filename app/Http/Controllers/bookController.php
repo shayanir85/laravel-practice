@@ -32,7 +32,7 @@ class BookController extends Controller
     {
         $newBook = new book($request -> all() );
         $newBook-> save();
-        return redirect('Book');
+        return redirect('Book')->with('success','book adedd successfully');
     }
 
     /**
