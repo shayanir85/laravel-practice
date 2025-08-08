@@ -1,5 +1,5 @@
 @extends('layout.master-admin')
-@section('main-part-book')
+@section('main-part')
 <div class="m-5 row">
     <div class="col col-lg-4">
         <div class="card card-primary card-outline mb-4">
@@ -9,7 +9,7 @@
             </div>
             <!--end::Header-->
             <!--begin::Form-->
-            <form method="post" action="{{ route('Book.store') }}">
+            <form method="post" action="{{ route('book') }}">
                 {{ @csrf_field() }}
                 <div class="card-body">
                     <div class="mb-3">

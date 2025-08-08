@@ -38,7 +38,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/Book" class="nav-link">
+              <a href="{{ route('books.store') }}" class="nav-link">
                 <i class="nav-icon bi bi-file-plus"></i>
                 <p>Add Book</p>
               </a>
@@ -55,50 +55,28 @@
           <a href="#" class="nav-link">
             <i class="nav-icon bi bi-box-seam"></i>
             <p>
-              genere
+              Genre
               <i class="nav-arrow bi bi-chevron-right"></i>
             </p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon bi bi-heart"></i>
-                <p>romance</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon bi bi-person"></i>
-                <p>biography</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon bi bi-flask"></i>
-                <p>Sci-Fi</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon bi bi-journal"></i>
-                <p>Fiction</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon bi bi-search"></i>
-                <p>Mystery</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="/Genre" class="nav-link">
+              <a href="{{ route('genres.index') }}" class="nav-link">
                 <i class="nav-icon bi bi-plus"></i>
-                <p>Add genre</p>
+                <p>All Genres</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ route('genres.create') }}" class="nav-link">
+                <i class="nav-icon bi bi-plus"></i>
+                <p>Add Genre</p>
               </a>
             </li>
           </ul>
         </li>
-        <!--  <li class="nav-item">
+      </ul>
+      </li>
+      <!--  <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="nav-icon bi bi-clipboard-fill"></i>
                   <p>

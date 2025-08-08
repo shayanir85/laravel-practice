@@ -5,13 +5,18 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class,'home']);
-Route::get('/admin',function(){
+// Main routes
+Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/admin', function () {
     return view('admin.admin');
-});
-Route::get('/explore',function(){
+})->name('admin');
+Route::get('/explore', function () {
     return view('explore.explore');
-});
+})->name('explore');
 
-Route::resource('/Book', BookController::class);
-Route::resource('/Genre', GenreController::class);
+// Resource routes with proper naming convention
+Route::resource('books', BookController::class)->parameters([
+    'books' => 'book'  
+]);
+
+Route::resource('genres', GenreController::class);

@@ -1,5 +1,5 @@
 @extends('layout.master-admin')
-@section('main-part-genre')
+@section('main-part')
     <div class="m-5 row">
         <div class="col col-lg-4">
             <div class="card card-primary card-outline mb-4">
