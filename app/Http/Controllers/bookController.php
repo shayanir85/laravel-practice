@@ -13,7 +13,8 @@ class BookController extends Controller
      */
     public function index()
     {
-        return view('Book/book');
+        $Books = book::all()->sortBy('name');
+        return view('Books.index' , compact('Books')) ;
     }
 
     /**
@@ -21,8 +22,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        
-            
+         return view('Books.create');
     }
 
     /**
@@ -32,7 +32,7 @@ class BookController extends Controller
     {
         $newBook = new book($request -> all() );
         $newBook-> save();
-        return redirect('Book')->with('success','book adedd successfully');
+        return redirect('Books/create')->with('success','book adedd successfully');
     }
 
     /**

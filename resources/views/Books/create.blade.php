@@ -9,7 +9,7 @@
             </div>
             <!--end::Header-->
             <!--begin::Form-->
-            <form method="post" action="{{ route('book') }}">
+            <form method="post" action="{{ route('Books.store') }}">
                 {{ @csrf_field() }}
                 <div class="card-body">
                     <div class="mb-3">
@@ -24,22 +24,10 @@
                         <label for="YearOfBook" class="form-label">year of the book</label>
                         <input type="date" class="form-control" name="year" id="YearOfBook" />
                     </div>
-                    <!-- <div class="mb-3">
-                            <label for="genre_id" class="form-label">genre_id</label>
-                            <input type="text" class="form-control" name="genre_id" id="genre_id" />
-                        </div> -->
-
-                    <!-- <div class="input-group mb-3">
-                                <input type="file" class="form-control" id="image" />
-                                <label class="input-group-text" name="imageOfBook" for="image">Upload</label>
-                            </div> -->
                 </div>
-                <!--end::Body-->
-                <!--begin::Footer-->
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
-                <!--end::Footer-->
             </form>
             @if ($errors->has('BookName'))
             <span class=" m-3 alert alert-danger ">{{ $errors -> first('BookName') }}</span>
