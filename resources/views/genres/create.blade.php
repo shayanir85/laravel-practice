@@ -7,9 +7,8 @@
                 <div class="card-header">
                     <div class="card-title">Add Book</div>
                 </div>
-                <!--end::Header-->
-                <!--begin::Form-->
-                <form method="post" class="overflow-a" action="{{ route('Genre.store') }}">
+
+                <form method="post" class="overflow-a" action="{{ route('genres.store') }}">
                     {{ @csrf_field() }}
                     <div class="card-body">
                         <div class="mb-3">
@@ -17,14 +16,11 @@
                             <input type="text" name="name" id="name" class="form-control" />
                         </div>
                     </div>
-
-                    <!--end::Body-->
-                    <!--begin::Footer-->
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
-
                 </form>
+
                 @if ($errors->has('name'))
                     <span class=" m-3 alert alert-danger  "> {{ $errors->first('name') }} </span>
                 @endif

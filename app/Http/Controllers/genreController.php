@@ -1,9 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Http\Requests\GenreRequest;
-use App\Models\genre;
+use App\Models\Genre; // Note: Capitalized model name
 use Illuminate\Http\Request;
 
 class GenreController extends Controller
@@ -11,19 +10,19 @@ class GenreController extends Controller
     public function index()
     {
         $genres = genre::all()->sortBy('name');
-        return view('genre.index.index', compact('genres'));
+        return view('genres.index', compact('genres'));
     }
 
-    public function create(GenreRequest $request)
+    public function create()
     {
-        dd('create');
+        return view('genres.create');
+    }
+    
+    public function store(GenreRequest $request)
+    {
         $name = new genre($request->all());
         $name->save();
-        return redirect('genre.create.create')->with('success', 'successfully added the genre');
-    }
-
-    public function store()
-    {
+        return redirect('genres.store')->with('success', 'successfully added the genre');
 
     }
 

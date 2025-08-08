@@ -16,7 +16,8 @@ Route::get('/explore', function () {
 
 // Resource routes with proper naming convention
 Route::resource('books', BookController::class)->parameters([
-    'books' => 'book'  
+    'books' => 'book'
 ]);
-
-Route::resource('genres', GenreController::class);
+Route::get('/genres' , [GenreController::class , 'index'])->name('genres.index');
+Route::get('/genres/create' , [GenreController::class , 'create'])->name('genres.create');
+Route::post('/genres/store' , [GenreController::class , 'store'])->name('genres.store');
